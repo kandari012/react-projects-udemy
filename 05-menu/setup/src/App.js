@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
-import Menu from './Menu';
-import Categories from './Categories';
-import items from './data';
+import React, { useState } from "react";
+import Menu from "./Menu";
+import Categories from "./Categories";
+import items from "./data";
 
 function App() {
-  return <h2>menu project setup</h2>;
+  const selectCategory = () => {};
+  return (
+    <div>
+      menu project setup
+      <Categories />
+      {items.map((item) => {
+        return <Menu item={item} key={item.id}></Menu>;
+      })}
+    </div>
+  );
 }
 
 export default App;
